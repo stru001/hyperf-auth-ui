@@ -1,5 +1,6 @@
 {
     "name": "stru/stru-hyperf-ui",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Stru\\StruHyperfUi\\": "src/"
