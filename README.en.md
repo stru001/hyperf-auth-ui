@@ -1,4 +1,4 @@
-# stru-hyperf-auth
+# stru-hyperf-ui
 
 #### Description
 - 使用blade模板实现发布注册，登录视图

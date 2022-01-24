@@ -1,5 +1,6 @@
 {
     "name": "stru/stru-hyperf-ui",
+    "description": "Hyperf 的 Auth blade ui组件，配合 stru/stru-hyperf-auth 一起使用",
     "license": "MIT",
     "autoload": {
         "psr-4": {

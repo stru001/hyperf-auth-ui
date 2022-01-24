@@ -1,4 +1,4 @@
-# stru-hyperf-auth
+# stru-hyperf-ui
 
 #### Description
 ```
