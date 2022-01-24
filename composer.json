@@ -1,0 +1,29 @@
+{
+    "name": "stru/stru-hyperf-ui",
+    "autoload": {
+        "psr-4": {
+            "Stru\\StruHyperfUi\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "stru",
+            "email": "struphp@sina.com"
+        }
+    ],
+    "require": {
+        "hyperf/view": "^2.2",
+        "hyperf/view-engine": "^2.2",
+        "hyperf/task": "^2.2",
+        "duncan3dc/blade": "^4.11",
+        "hyperf/http-server": "^2.2"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.0-dev"
+        },
+        "hyperf": {
+            "config": "Stru\\StruHyperfUi\\ConfigProvider"
+        }
+    }
+}
