@@ -31,6 +31,12 @@ class ConfigProvider
                     'destination' => BASE_PATH . '/public/css/app.css',
                 ],
                 [
+                    'id' => 'public',
+                    'description' => 'The js for app.',
+                    'source' => __DIR__ . '/../public/js/app.js',
+                    'destination' => BASE_PATH . '/public/js/app.js',
+                ],
+                [
                     'id' => 'view',
                     'description' => 'The view for auth.',
                     'source' => __DIR__ . '/../views/layouts/app.blade.php',

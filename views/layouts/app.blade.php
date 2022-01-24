@@ -35,30 +35,28 @@
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ml-auto">
                     <!-- Authentication Links -->
-                    {{--                    @guest //这里需要补充验证--}}
+                    @guest
                     <li class="nav-item">
                         <a class="nav-link" href="/auth/login">登录</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/auth/register">注册</a>
                     </li>
-                    {{--                    @else--}}
+                    @else
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{--                                {{ Auth::user()->name }} --}}
-                            这里是用户名显示
+                            {{ auth_user()->name }}
                             <span class="caret"></span>
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="/auth/logout"
-                               onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                            <a class="dropdown-item" href="#"
+                               onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                                 退出
                             </a>
                         </div>
                     </li>
-                    {{--                    @endguest--}}
+                    @endguest
                 </ul>
             </div>
         </div>
