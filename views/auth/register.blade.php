@@ -44,7 +44,7 @@
                                 <label for="password" class="col-md-4 col-form-label text-md-right"></label>
 
                                 <div class="col-md-6">
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="invalid-feedback" role="alert" style="display: block">
                                         <strong>{{ $error_message ?? '' }}</strong>
                                     </span>
                                 </div>
