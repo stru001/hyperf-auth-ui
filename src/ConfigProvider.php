@@ -25,6 +25,12 @@ class ConfigProvider
             ],
             'publish' => [
                 [
+                    'id' => 'config',
+                    'description' => 'The config for blade.',
+                    'source' => __DIR__ . '/../config/blade.php',
+                    'destination' => BASE_PATH . '/config/autoload/blade.php',
+                ],
+                [
                     'id' => 'public',
                     'description' => 'The css for app.',
                     'source' => __DIR__ . '/../public/css/app.css',
