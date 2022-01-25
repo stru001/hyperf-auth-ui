@@ -8,7 +8,7 @@
                     <div class="card-header">登录</div>
 
                     <div class="card-body">
-                        <form method="POST" action="/auth/login">
+                        <form method="POST" action="{{ config('blade.route.login') }}">
                             <div class="form-group row">
                                 <label for="email" class="col-md-4 col-form-label text-md-right">邮箱</label>
 

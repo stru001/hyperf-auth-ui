@@ -37,15 +37,15 @@
                     <!-- Authentication Links -->
 {{--                    @guest--}}
                     <li class="nav-item">
-                        <a class="nav-link" href="/auth/login">登录</a>
+                        <a class="nav-link" href="{{ config('blade.route.show_login') }}">登录</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/auth/register">注册</a>
+                        <a class="nav-link" href="{{ config('blade.route.show_register') }}">注册</a>
                     </li>
 {{--                    @else--}}
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-{{--                            {{ auth_user()->name }}--}}
+{{--                            {{ auth_user()->name ?? '' }}--}}
                             <span class="caret"></span>
                         </a>
 
@@ -54,7 +54,7 @@
                                 退出
                             </a>
                         </div>
-                        <form id="logout-form" action="/auth/logout" method="POST" style="display: none;"></form>
+                        <form id="logout-form" action="{{ config('blade.route.logout') }}" method="POST" style="display: none;"></form>
                     </li>
 {{--                    @endguest--}}
                 </ul>

@@ -67,10 +67,10 @@
 <div class="flex-center position-ref full-height">
         <div class="top-right links">
 {{--            @auth--}}
-                <a href="/home">Home</a>
+                <a href="{{ config('blade.route.home') }}">Home</a>
 {{--            @else--}}
-                <a href="/auth/login">Login</a>
-                <a href="/auth/register">Register</a>
+                <a href="{{ config('blade.route.show_login') }}">登录</a>
+                <a href="{{ config('blade.route.show_register') }}">注册</a>
 {{--            @endauth--}}
         </div>
     <div class="content">

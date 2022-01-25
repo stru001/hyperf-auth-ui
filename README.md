@@ -60,4 +60,9 @@ public function showRegister()
 }
 ```
 
+#### Tips
+```
+// 为了使模板内的路由更加灵活，可以配置 config/autolaod/blade.php 文件，自己定义路由
+```
+
 
