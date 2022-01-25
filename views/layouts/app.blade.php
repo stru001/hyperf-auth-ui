@@ -54,6 +54,7 @@
                                 退出
                             </a>
                         </div>
+                        <form id="logout-form" action="/auth/logout" method="POST" style="display: none;"></form>
                     </li>
 {{--                    @endguest--}}
                 </ul>

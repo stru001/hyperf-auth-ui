@@ -69,8 +69,8 @@
 {{--            @auth--}}
                 <a href="/home">Home</a>
 {{--            @else--}}
-                <a href="/login">Login</a>
-                <a href="/register">Register</a>
+                <a href="/auth/login">Login</a>
+                <a href="/auth/register">Register</a>
 {{--            @endauth--}}
         </div>
     <div class="content">
