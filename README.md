@@ -7,40 +7,45 @@
 
 #### Installation
 ```
-composer require stru/stru-hyperf-auth
+composer require stru/stru-hyperf-ui
 ```
 
 #### Publish
 ```
-php bin/hyperf.php vendor:publish stru/stru-hyperf-auth
+php bin/hyperf.php vendor:publish hyperf/view
+php bin/hyperf.php vendor:publish stru/stru-hyperf-ui
 ```
 
 
 #### Config
 ```
-// config/authload/middlewares.php 添加session
-\Hyperf\Session\Middleware\SessionMiddleware::class,
-
-// config/authload/exceptions.php 添加异常处理
-\Stru\StruHyperfAuth\AuthExceptionHandler::class,
-
-// App\Model\User.php
-1. 实现接口 Authenticatable
-2. 添加代码
-public function getAuthIdentifierName(): string
-{
-    return $this->getKeyName();
-}
-
-public function getAuthIdentifier()
-{
-    return $this->getKey();
-}
-
-public function getAuthPassword(): string
-{
-    return $this->password;
-}
+// config/autoload/view.php
+return [
+    'engine' => BladeEngine::class,
+    'mode' => Mode::TASK,
+    'config' => [
+        'view_path' => BASE_PATH . '/resources/views/',
+        'cache_path' => BASE_PATH . '/runtime/view/',
+    ],
+];
+// ocnfig/autoload/server.php
+return [
+    'settings' => [
+        ...
+        // 静态资源
+        'document_root' => BASE_PATH . '/public',
+        'enable_static_handler' => true,
+        // Task
+        'task_worker_num' => 2,
+        'task_enable_coroutine' => false
+    ],
+    'callbacks' => [
+        ...
+        // Task callbacks
+        Event::ON_TASK => [Hyperf\Framework\Bootstrap\TaskCallback::class, 'onTask'],
+        Event::ON_FINISH => [Hyperf\Framework\Bootstrap\FinishCallback::class, 'onFinish'],
+    ]
+];
 ```
 
 #### Use

@@ -66,12 +66,12 @@
 <body>
 <div class="flex-center position-ref full-height">
         <div class="top-right links">
-            @auth  //Stru这里要todo
+{{--            @auth--}}
                 <a href="/home">Home</a>
             @else
                 <a href="/login">Login</a>
                 <a href="/register">Register</a>
-            @endauth
+{{--            @endauth--}}
         </div>
     <div class="content">
         <div class="title m-b-md">
