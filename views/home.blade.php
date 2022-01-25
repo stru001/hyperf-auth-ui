@@ -68,7 +68,7 @@
         <div class="top-right links">
 {{--            @auth--}}
                 <a href="/home">Home</a>
-            @else
+{{--            @else--}}
                 <a href="/login">Login</a>
                 <a href="/register">Register</a>
 {{--            @endauth--}}

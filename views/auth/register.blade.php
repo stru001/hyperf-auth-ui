@@ -8,7 +8,7 @@
                     <div class="card-header">注册</div>
 
                     <div class="card-body">
-                        <form method="POST" action="/auht/register">
+                        <form method="POST" action="/auth/register">
                             <div class="form-group row">
                                 <label for="name" class="col-md-4 col-form-label text-md-right">用户名</label>
 
