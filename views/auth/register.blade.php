@@ -45,7 +45,7 @@
 
                                 <div class="col-md-6">
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $erro_message ?? '' }}</strong>
+                                        <strong>{{ $error_message ?? '' }}</strong>
                                     </span>
                                 </div>
                             </div>
